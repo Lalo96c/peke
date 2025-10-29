@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌷 Para ti 💌</title>
+    <title>Una historia 💫</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="card">
-        <h1>🌷 Para ti 💌</h1>
+        <img src="snoopy.jpg" alt="Snoopy" class="snoopy-img">
+        <h1>🐾 Una pequeña historia 🩷</h1>
         <p>
-            Puede que todo haya comenzado por casualidad,<br>
-            pero contigo todo empezó a tener sentido.<br><br>
-            No sé qué pasará más adelante,<br>
-            pero hoy solo quiero que sepas<br>
-            que me encantas tal como eres 🌸<br><br>
-            Ojalá este pequeño Snoopy te saque una sonrisa,<br>
-            como tú lo haces conmigo cada día 🐾💫
+            Todo empezó con algo tan simple como un juego,
+            y sin darme cuenta, terminé conociendo a alguien con una historia que me conmovió mucho.
+            No puedo cambiar lo que viviste, pero sí puedo alegrarme de haberte sacado al menos unas sonrisas.
+            Me gusta pensar que, aunque sea por un momento, pude hacerte sentir un poquito mejor.
+            A veces lo bonito llega sin avisar,
+            y tú fuiste esa sorpresa que no esperaba 🩷🐾
         </p>
-        <img src="snoopy.jpg" alt="Regalo con Snoopy y tulipanes" class="gift">
-        <p class="footer">— Con cariño, el chico que te conoció en Roblox 💜</p>
+        <p class="from">— De Lalo 💙</p>
     </div>
+    <script>
+        const body = document.body;
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.textContent = '💖';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (3 + Math.random() * 3) + 's';
+            body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 400);
+    </script>
+
 </body>
+
 </html>
